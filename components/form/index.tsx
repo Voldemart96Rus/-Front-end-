@@ -11,7 +11,6 @@ interface IFromProps {
 export default class Form extends Component<IFromProps, IContactData> {
     state: IContactData = {
         id: '',
-        // tslint:disable-next-line:object-literal-sort-keys
         fio: '',
         email: '',
         tel: '',
@@ -40,10 +39,8 @@ export default class Form extends Component<IFromProps, IContactData> {
 
     handleSubmit = () => {
         this.props.onSumbit(this.state);
-        // После отправки формы очищаем её
         this.setState({
         fio: '',
-        // tslint:disable-next-line:object-literal-sort-keys
         email: '',
         tel: '',
         address: ''});
@@ -52,7 +49,6 @@ export default class Form extends Component<IFromProps, IContactData> {
     render() {
         const {fio, email, tel, address} = this.state;
 
-        // Кнопка должна быть активна только тогда, когда оба поля заполненны
         const isButtonDisabled = !fio || !email || !tel || !address;
 
         return (
