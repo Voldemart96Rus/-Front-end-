@@ -1,0 +1,22 @@
+table {
+  border-collapse: collapse;
+  border: 1px solid grey;
+  width: 100%;
+}
+
+th,  td{
+  text-align: center;
+  border: 1px solid grey;
+}
+
+button {
+  border: none;
+  border-radius: 40px;
+  background: #573bd3;
+  color: #fff;
+  padding: 10px;
+}
+
+tbody {
+  font-size: 20px;
+}
